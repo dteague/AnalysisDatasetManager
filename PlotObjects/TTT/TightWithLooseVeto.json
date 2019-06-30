@@ -1,0 +1,130 @@
+{
+    "ptl1": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 400,
+            "xmin": 0,
+            "xmax": 1000
+        },
+        "Attributes": {  
+            "GetXaxis().SetTitle": "p_{\\mathrm{T}}(\\ell_{1}}\\,\\mathrm{[GeV]}",  
+            "GetYaxis().SetTitle": "Events / GeV", 
+            "GetYaxis().SetTitleOffset": 1.3,
+            "SetMinimum" : 0.1,
+            "SetMaximum" : 3000
+        }
+    },
+    "ptl2": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 400,
+            "xmin": 0,
+            "xmax": 1000
+        },
+        "Attributes": {  
+            "GetXaxis().SetTitle": "p_{\\mathrm{T}}(\\ell_{1}}\\,\\mathrm{[GeV]}",  
+            "GetYaxis().SetTitle": "Events / GeV", 
+            "GetYaxis().SetTitleOffset": 1.3,
+            "SetMinimum" : 0.1,
+            "SetMaximum" : 3000
+        }
+    },
+    "bjetpt": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 200,
+            "xmin": 0,
+            "xmax": 500
+        },
+        "Attributes": {  
+            "GetXaxis().SetTitle": "p_{\\mathrm{T}}(\\ell_{1}}\\,\\mathrm{[GeV]}",  
+            "GetYaxis().SetTitle": "Events / GeV", 
+            "GetYaxis().SetTitleOffset": 1.3,
+            "SetMinimum" : 0.1,
+            "SetMaximum" : 3000
+        }
+    },
+    "jetpt": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 200,
+            "xmin": 0,
+            "xmax": 500
+        },
+        "Attributes": {  
+            "GetXaxis().SetTitle": "p_{\\mathrm{T}}(\\ell_{1}}\\,\\mathrm{[GeV]}",  
+            "GetYaxis().SetTitle": "Events / GeV", 
+            "GetYaxis().SetTitleOffset": 1.3,
+            "SetMinimum" : 0.1,
+            "SetMaximum" : 3000
+        }
+    },
+    "CutFlow": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 10,
+            "xmin": 0,
+            "xmax": 10
+        },
+        "Attributes": {  
+            "GetYaxis().SetTitle": "Events", 
+            "GetYaxis().SetTitleOffset": 1.3,
+            "SetMinimum" : 0.1,
+            "SetMaximum" : 7000000
+        }
+    },
+    "SR": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 8,
+            "xmin": 1,
+            "xmax": 9
+        },
+        "Attributes": {  
+            "GetYaxis().SetTitle": "Events", 
+            "GetYaxis().SetTitleOffset": 1.3,
+            "SetMinimum" : 0.1,
+            "SetMaximum" : 7000000
+        }
+    },
+    "njet": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 20,
+            "xmin": 0,
+            "xmax": 20
+        },
+        "Attributes": {  
+            "GetYaxis().SetTitle": "Events", 
+            "GetYaxis().SetTitleOffset": 1.3,
+            "SetMinimum" : 0.1,
+            "SetMaximum" : 7000000
+        }
+    },
+    "nbjet": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 20,
+            "xmin": 0,
+            "xmax": 20
+        },
+        "Attributes": {  
+            "GetYaxis().SetTitle": "Events", 
+            "GetYaxis().SetTitleOffset": 1.3,
+            "SetMinimum" : 0.1,
+            "SetMaximum" : 7000000
+        }
+    },
+
+    "YieldByChannel": {  
+        "Initialize": {  
+            "type": "TH1D",
+            "nbins": 3,
+            "xmin": 0,
+            "xmax": 10
+        },
+        "Attributes": {  
+            "GetYaxis().SetTitle": "Events Passing Selection"
+        }
+    }
+}

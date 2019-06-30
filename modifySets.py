@@ -1,5 +1,7 @@
 import os
 import json
+import argparse
+
 
 Analysis=""
 InputTier=""
@@ -98,13 +100,23 @@ def getGroups(analysis):
 
 def getMCInfo(name):
     for file in os.listdir("./FileInfo/montecarlo/"):
-        if file.endswith(".json"):
+        if file.endswith(".py"):
             config = dict()
-            execfile("./PlotGroups/%s.py" % (analysis), config)
+            execfile("./FileInfo/montecarlo/%s" % file, config)
             info = config["info"]
             if name in info:
                 return info[name]
     return {}
+
+def getMCNames():
+    for file in os.listdir("./FileInfo/montecarlo/"):
+        if file.endswith(".py") and file != "__init__.py":
+            config = dict()
+            execfile("./FileInfo/montecarlo/%s" % (file), config)
+            info = config["info"]
+            return info.keys()
+
+
 
 def getHistograms(analysis, selection):
     with open("./PlotObjects/%s/%s.json" % (analysis, selection)) as ofile:
@@ -118,7 +130,7 @@ def getHistogramInfo(analysis, selection, histogram):
     
     
 
-def addPlotGroup(analysis):
+def addPlotGroup(analysis, group_name):
     config = dict()
     execfile("./PlotGroups/%s.py" % (analysis), config)
     info = config["info"]
@@ -128,17 +140,49 @@ def addPlotGroup(analysis):
     #     Name
     #     Style
     #     Members
-    group_name = raw_input("What is the file alias")
-    Name = raw_input("What is the file alias")
-    Style = raw_input("What is the plot group?")
+    Name = raw_input("What is the official name of the Group: ")
+    Style = "fill-yellow"
     Members = []
     tmpdict["Name"] = Name
-    tmpdict["Style"] = Sytle
-    tmpdict["Members"] = Members
-    info[name] = tmpdict
-    print "info =", json.dumps(info)
+    tmpdict["Style"] = Style
+    tmpdict["Members"] = []
+    info[group_name] = tmpdict
+    with open("./PlotGroups/%s.py" % (analysis),'w') as ofile:
+        ofile.write("info ="+ json.dumps(info, indent=4))
 
-def addFileInfo(analysis, selection):
+def addMCItem(name):
+    config = dict()
+    execfile("./FileInfo/montecarlo/montecarlo_2016.py", config)
+    info = config["info"]
+    # creates a dictionary called info
+    tmpdict = {}
+    # Template:
+    #     Name
+    #     Style
+    #     Members
+    cross_section = raw_input("What is cross section of the Event: ")
+    tmpdict["cross_section"] = cross_section
+    tmpdict["Source of cross section"] = ""
+    tmpdict["DAS Name"] = ""
+    tmpdict["Generator"] = ""
+    tmpdict["Cards"] = ""
+    print "You will need to manually put in generation info!"
+    print
+    info[name] = tmpdict
+    with open("./FileInfo/montecarlo/montecarlo_2016.py",'w') as ofile:
+        ofile.write("info ="+ json.dumps(info, indent=4))
+
+def addMemeber(analysis, group_name, member):
+    config = dict()
+    execfile("./PlotGroups/%s.py" % (analysis), config)
+    info = config["info"]
+    # creates a dictionary called info
+    info[group_name]["Members"].append(member)
+    with open("./PlotGroups/%s.py" % (analysis),'w') as ofile:
+        ofile.write("info ="+ json.dumps(info, indent=4))
+        
+        
+def addFileInfo(analysis, selection, name, plot_group, file_path):
     config = dict()
     execfile("./FileInfo/%s/%s.py" % (analysis, selection), config)
     info = config["info"]
@@ -147,13 +191,12 @@ def addFileInfo(analysis, selection):
     # Template:
     #     plot_group
     #     file_path
-    name = raw_input("What is the file alias")
-    plot_group = raw_input("What is the plot group?")
-    file_path = raw_input("What is the file_path")
     tmpdict["plot_group"] = plot_group
     tmpdict["file_path"] = file_path
     info[name] = tmpdict
-    print "info =", json.dumps(info, indent=4)
+    with open("./FileInfo/%s/%s.py" % (analysis, selection),'w') as ofile:
+        ofile.write("info ="+ json.dumps(info, indent=4))
+
 
 def addPlotObject(analysis, selection, inpVars):
     with open("./PlotObjects/%s/%s.json" % (analysis, selection)) as ofile:
@@ -203,8 +246,27 @@ def AddHistogram(ana, sel):
     addPlotObject(ana, sel, inpVars)
 
 
-def AddFile(ana, inp):
+def AddFile(ana, inp, file_path):
     #### to do
+    groups=getGroups(ana)
+    groups.append("New Group")
+    group_choice = menu("Which group will this go with?", groups)
+    if group_choice == "New Group":
+        group_choice  = raw_input("What is abbreviated name of the Group: ")
+        addPlotGroup(ana, group_choice)
+        print
+    
+    mcList = getMCNames()
+    mcList.sort()
+    mcList.append("New Name")
+    mc_choice = menu("What do you want to name it", mcList)
+    if mc_choice == "New Name":
+        mc_choice = raw_input("What do you want the new Name to be: ")
+        addMCItem(mc_choice)
+        print
+        
+    addFileInfo(ana, inp, mc_choice, group_choice, file_path)
+    addMember(ana, group_choice, mc_choice)
     return
     
     
@@ -215,9 +277,9 @@ def menu(beginText, lister):
     
     half = int((len(lister)+1)/2)
     for i in xrange(int((len(lister))/2)):
-        print "%s: %-25s %s: %-25s" % (i+1, lister[i], i+half+1, lister[i+half])
+        print "%2s: %-25s %2s: %-25s" % (i+1, lister[i], i+half+1, lister[i+half])
     if len(lister) % 2 == 1:
-        print "%s: %-25s" % (half, lister[half-1])
+        print "%2s: %-25s" % (half, lister[half-1])
         
     ans=True
     while ans:
@@ -235,16 +297,39 @@ def menu(beginText, lister):
     print
     return returnText
 
-    
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-s", "--selection", type=str, default="",
+                    help="Name of selection to make, "
+                    " as defined in Cuts/<analysis>/<selection>.json")
+parser.add_argument("-a", "--analysis", type=str, required=False, default="",
+                    help="Analysis name, used in selecting the cut json")
+parser.add_argument("-i", "--input_tier", type=str, default="",required=False)
+                    
+parser.add_argument("--AddFile", type=str, default="",
+                    help="Go straight to AddFile and add filename given")
+
+
+args = parser.parse_args()
+Analysis = args.analysis
+Selection = args.selection
+InputTier = args.input_tier
+
+if args.AddFile:
+    AddFile(ana(), sel(), args.AddFile)
+    exit(0)
+
 actionList = ["Add a File", "Add a Histogram", "List Data", "List MC", "List Histograms", "Quit"]
 while True:
     action = menu("What action do you want to do?", actionList)
     # Add a file
-    if action == actionList[0]:
-        AddFile(ana(), sel())
+    if action == "Add a File":
+        file_path=raw_input("What is the File Path: ")
+        AddFile(ana(), sel(), file_path)
 
     # Add a Histogram
-    elif action == actionList[1]:
+    elif action == "Add a Histogram":
         AddHistogram(ana(), sel())
 
     # List Data
