@@ -1,7 +1,16 @@
+#!/usr/bin/env python
 import os
 import json
 import argparse
+from modifyHelper import *
 
+"""
+Weird code I wrote to set global variables of analysis etc.
+Call the ana(), sel(), inp() and it takes care of finding choices
+and picking a choice
+
+TODO: allow ability to add ana, sel, inp, etc
+"""
 
 Analysis=""
 InputTier=""
@@ -53,179 +62,44 @@ def sel():
         return Selection
 
 
-def checkAnalysis(analysis):
-    if analysis not in os.listdir("./FileInfo"):
-        return False
-    elif analysis not in os.listdir("./PlotObjects"):
-        return False
-    else:
-        return True
-
-def getSelections(analysis):
-    valid = []
-    for file in os.listdir("./PlotObjects/" + analysis):
-        if file.endswith(".json"):
-            valid.append(file.split(".")[0])
-    return valid
-
-def getInputs(analysis):
-    valid = []
-    tmplist = []
-    for file in os.listdir("./FileInfo/" + analysis):
-        if file.endswith(".py"):
-            valid.append(file.split(".")[0])
-    return valid
-
-def getAnalysis():
-    anaList = []
-    for file in os.listdir("./PlotGroups"):
-        if file.endswith(".py"):
-            anaTemp = file.split(".")[0]
-            if checkAnalysis(anaTemp):
-                anaList.append(anaTemp)
-    return anaList
-
-def getFiles(analysis, selection):
-    config = dict()
-    execfile("./FileInfo/%s/%s.py" % (analysis,selection), config)
-    info = config["info"]
-    return info.keys()
+    
+def menu(beginText, lister):
+    """
+    Takes list of options and print text and chooses one of those options
+      Does all of the checking that it's a valid choice so it return only
+      good options
+    """
+    print beginText
+    returnText = ""
 
     
-def getGroups(analysis):
-    config = dict()
-    execfile("./PlotGroups/%s.py" % (analysis), config)
-    info = config["info"]
-    return info.keys()
-
-def getMCInfo(name):
-    for file in os.listdir("./FileInfo/montecarlo/"):
-        if file.endswith(".py"):
-            config = dict()
-            execfile("./FileInfo/montecarlo/%s" % file, config)
-            info = config["info"]
-            if name in info:
-                return info[name]
-    return {}
-
-def getMCNames():
-    for file in os.listdir("./FileInfo/montecarlo/"):
-        if file.endswith(".py") and file != "__init__.py":
-            config = dict()
-            execfile("./FileInfo/montecarlo/%s" % (file), config)
-            info = config["info"]
-            return info.keys()
-
-
-
-def getHistograms(analysis, selection):
-    with open("./PlotObjects/%s/%s.json" % (analysis, selection)) as ofile:
-        info = json.load(ofile)
-    return info.keys()
+    half = int((len(lister)+1)/2)
+    for i in xrange(int((len(lister))/2)):
+        print "%2s: %-25s %2s: %-25s" % (i+1, lister[i], i+half+1, lister[i+half])
+    if len(lister) % 2 == 1:
+        print "%2s: %-25s" % (half, lister[half-1])
         
-def getHistogramInfo(analysis, selection, histogram):
-    with open("./PlotObjects/%s/%s.json" % (analysis, selection)) as ofile:
-        info = json.load(ofile)
-    return info[histogram]
-    
-    
+    ans=True
+    while ans:
+        ans=raw_input("$ ")
+        try:
+            choice = int(ans)
+            if choice <= len(lister) and choice > 0:
+                returnText = lister[choice-1]
+                break
+            else:
+                print("\nNot Valid Choice Try again")
+        except ValueError:
+            print("\nNot Valid Choice Try again")
 
-def addPlotGroup(analysis, group_name):
-    config = dict()
-    execfile("./PlotGroups/%s.py" % (analysis), config)
-    info = config["info"]
-    # creates a dictionary called info
-    tmpdict = {}
-    # Template:
-    #     Name
-    #     Style
-    #     Members
-    Name = raw_input("What is the official name of the Group: ")
-    Style = "fill-yellow"
-    Members = []
-    tmpdict["Name"] = Name
-    tmpdict["Style"] = Style
-    tmpdict["Members"] = []
-    info[group_name] = tmpdict
-    with open("./PlotGroups/%s.py" % (analysis),'w') as ofile:
-        ofile.write("info ="+ json.dumps(info, indent=4))
-
-def addMCItem(name):
-    config = dict()
-    execfile("./FileInfo/montecarlo/montecarlo_2016.py", config)
-    info = config["info"]
-    # creates a dictionary called info
-    tmpdict = {}
-    # Template:
-    #     Name
-    #     Style
-    #     Members
-    cross_section = raw_input("What is cross section of the Event: ")
-    tmpdict["cross_section"] = cross_section
-    tmpdict["Source of cross section"] = ""
-    tmpdict["DAS Name"] = ""
-    tmpdict["Generator"] = ""
-    tmpdict["Cards"] = ""
-    print "You will need to manually put in generation info!"
     print
-    info[name] = tmpdict
-    with open("./FileInfo/montecarlo/montecarlo_2016.py",'w') as ofile:
-        ofile.write("info ="+ json.dumps(info, indent=4))
+    return returnText
 
-def addMemeber(analysis, group_name, member):
-    config = dict()
-    execfile("./PlotGroups/%s.py" % (analysis), config)
-    info = config["info"]
-    # creates a dictionary called info
-    info[group_name]["Members"].append(member)
-    with open("./PlotGroups/%s.py" % (analysis),'w') as ofile:
-        ofile.write("info ="+ json.dumps(info, indent=4))
-        
-        
-def addFileInfo(analysis, selection, name, plot_group, file_path):
-    config = dict()
-    execfile("./FileInfo/%s/%s.py" % (analysis, selection), config)
-    info = config["info"]
-    # creates a dictionary called info
-    tmpdict = {}
-    # Template:
-    #     plot_group
-    #     file_path
-    tmpdict["plot_group"] = plot_group
-    tmpdict["file_path"] = file_path
-    info[name] = tmpdict
-    with open("./FileInfo/%s/%s.py" % (analysis, selection),'w') as ofile:
-        ofile.write("info ="+ json.dumps(info, indent=4))
-
-
-def addPlotObject(analysis, selection, inpVars):
-    with open("./PlotObjects/%s/%s.json" % (analysis, selection)) as ofile:
-        info = json.load(ofile)
-
-    # creates a dictionary called info
-    tmpdict = {}
-    # Template:
-    #     type
-    #     nbins
-    #     xmin
-    #     xmax
-    #     Xaxis Title
-    #     Yaxis Title
-    name = inpVars.pop(0)
-    tmpdict["Initialize"] = {}
-    tmpdict["Attributes"] = {}
-    tmpdict["Initialize"]["type"] = "TH1F"
-    tmpdict["Initialize"]["nbins"] = inpVars.pop(0)
-    tmpdict["Initialize"]["xmin"] = inpVars.pop(0)
-    tmpdict["Initialize"]["xmax"] = inpVars.pop(0)
-    tmpdict["Attributes"]["GetXaxis().SetTitle"] = inpVars.pop(0)
-    tmpdict["Attributes"]["GetYaxis().SetTitle"] = inpVars.pop(0)
-    tmpdict["Attributes"]["GetYaxis().SetTitleOffset"] = 1.3
-    tmpdict["Attributes"]["SetMinimum"] = 0.1
-    tmpdict["Attributes"]["SetMaximum"] = 3000
-    info[name]=tmpdict
-    with open("./PlotObjects/%s/%s.json" % (analysis, selection),'w') as ofile:
-        ofile.write(json.dumps(info, indent=4))
+#################################################################
+# Main functions used for setting up Adding things to the files #
+# based on the names in the main menu.                          #
+# NOTE: capital "Add" used to note this is a menu option        #
+#################################################################
 
 def AddHistogram(ana, sel):
     inpVars = []
@@ -268,35 +142,14 @@ def AddFile(ana, inp, file_path):
     addFileInfo(ana, inp, mc_choice, group_choice, file_path)
     addMember(ana, group_choice, mc_choice)
     return
-    
-    
-def menu(beginText, lister):
-    print beginText
-    returnText = ""
 
-    
-    half = int((len(lister)+1)/2)
-    for i in xrange(int((len(lister))/2)):
-        print "%2s: %-25s %2s: %-25s" % (i+1, lister[i], i+half+1, lister[i+half])
-    if len(lister) % 2 == 1:
-        print "%2s: %-25s" % (half, lister[half-1])
-        
-    ans=True
-    while ans:
-        ans=raw_input("$ ")
-        try:
-            choice = int(ans)
-            if choice <= len(lister) and choice > 0:
-                returnText = lister[choice-1]
-                break
-            else:
-                print("\nNot Valid Choice Try again")
-        except ValueError:
-            print("\nNot Valid Choice Try again")
 
-    print
-    return returnText
-
+ ############################
+ # ___  ___  ___  __ __  __ #
+ # ||\\//|| // \\ || ||\ || #
+ # || \/ || ||=|| || ||\\|| #
+ # ||    || || || || || \|| #
+ ############################
 
 
 parser = argparse.ArgumentParser()
@@ -309,6 +162,8 @@ parser.add_argument("-i", "--input_tier", type=str, default="",required=False)
                     
 parser.add_argument("--AddFile", type=str, default="",
                     help="Go straight to AddFile and add filename given")
+parser.add_argument("--AddHistogram", action='store_true',
+                    help="Go straight to AddHistogram and add filename given")
 
 
 args = parser.parse_args()
@@ -316,10 +171,19 @@ Analysis = args.analysis
 Selection = args.selection
 InputTier = args.input_tier
 
+
+
 if args.AddFile:
     AddFile(ana(), sel(), args.AddFile)
     exit(0)
+elif args.AddHistogram:
+    AddHistogram(ana(), sel())
+    exit(0)
 
+#############
+# Main Menu #
+#############
+    
 actionList = ["Add a File", "Add a Histogram", "List Data", "List MC", "List Histograms", "Quit"]
 while True:
     action = menu("What action do you want to do?", actionList)
