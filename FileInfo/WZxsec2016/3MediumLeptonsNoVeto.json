@@ -11,27 +11,27 @@
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-wzjj-vbfnlo-sf-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
         "plot_group" : "wzjj-vbfnlo"
     },
-    "wz3lnu-powheg" : {
+    "wz3lnu_powheg" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-wz3lnu-powheg-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
         "plot_group" : "wz-powheg"
     },
-    "wz3lnu-mg5amcnlo" : {
+    "wz3lnu_mg5amcnlo" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-wz3lnu-mg5amcnlo-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
         "plot_group" : "wz"
     },
-    "wz3lnu-mgmlm-0j" : {
+    "wz3lnu_mgmlm_0j" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-wz3lnu-mgmlm-0j-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
         "plot_group" : "wz3lnu-mgmlm"
     },
-    "wz3lnu-mgmlm-1j" : {
+    "wz3lnu_mgmlm_1j" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-wz3lnu-mgmlm-1j-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
         "plot_group" : "wz3lnu-mgmlm"
     },
-    "wz3lnu-mgmlm-2j" : {
+    "wz3lnu_mgmlm_2j" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-wz3lnu-mgmlm-2j-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
         "plot_group" : "wz3lnu-mgmlm"
     },
-    "wz3lnu-mgmlm-3j" : {
+    "wz3lnu_mgmlm_3j" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-29-wz3lnu-mgmlm-3j-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
         "plot_group" : "wz3lnu-mgmlm"
     },
@@ -99,21 +99,21 @@
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-chargedHiggsWZ-m2000-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
         "plot_group" : "chargedHiggsWZ-m2000"
     },
-    "zz4l-powheg" : {
+    "zz4l_powheg" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-05-09-zz4l-powheg-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
-    "zz4l-mg5amcnlo" : {
+    "zz4l_mg5amcnlo" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-05-09-zz4l-mg5amcnlo-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "zz4ljj-ewk" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-05-09-zz4ljj-ewk-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "zz2l2vjj-ewk" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-05-09-zz2l2vjj-ewk-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "tt-lep" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-tt-lep-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
@@ -145,11 +145,11 @@
     },
     "ttz" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-ttz-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "ttw" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-04-27-ttw-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "zzz" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-05-09-zzz-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
@@ -209,15 +209,15 @@
     },
     "ggZZ4e" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-05-09-ggZZ4e-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ4m" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-05-09-ggZZ4m-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ2e2mu" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2018-05-09-ggZZ2e2mu-WZxsec2016-3MediumLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "data_DoubleEG_Run2016B-03Feb2017_ver2" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3MediumLeptons/2017-12-10-data_DoubleEG_Run2016B-03Feb2017_ver2-WZxsec2016-3MediumLeptonsNoVeto-v1/*",

@@ -69,11 +69,11 @@
     },
     "zz4l-powheg" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-zz4l-powheg-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "zz4l-mg5amcnlo" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-zz4l-mg5amcnlo-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "tt-lep" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-tt-lep-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
@@ -105,11 +105,11 @@
     },
     "ttz" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-ttz-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "ttw" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-ttw-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "zzz" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-zzz-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
@@ -169,15 +169,15 @@
     },
     "ggZZ4e" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-ggZZ4e-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ4m" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-ggZZ4m-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ2e2mu" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-ggZZ2e2mu-WZxsec2016-3LooseLeptonsNoVeto-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "data_DoubleEG_Run2016B-03Feb2017_ver2" : {
         "file_path" : "/nfs_scratch/kdlong/DibosonAnalysisData/3LooseLeptons/2018-08-02-data_DoubleEG_Run2016B-03Feb2017_ver2-WZxsec2016-3LooseLeptonsNoVeto-v1/*",

@@ -72,11 +72,11 @@
     },
     "zz4l-powheg" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-zz4l-powheg-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "zz4l-mg5amcnlo" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-zz4l-mg5amcnlo-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "tt-lep" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-tt-lep-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
@@ -108,11 +108,11 @@
     },
     "ttz" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-ttz-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "ttw" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-ttw-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "zzz" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-zzz-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
@@ -172,15 +172,15 @@
     },
     "ggZZ4e" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-ggZZ4e-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ4m" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-ggZZ4m-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ2e2mu" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-ggZZ2e2mu-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "data_DoubleEG_Run2016B-03Feb2017_ver2" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/3lDYControl/2017-08-17-data_DoubleEG_Run2016B-03Feb2017_ver2-WZxsec2016-3MediumLeptonsNoVetoTo3lDYControl-v1/*",

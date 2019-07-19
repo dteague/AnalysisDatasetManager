@@ -5,7 +5,7 @@
     },
     "wz3lnu-mg5amcnlo" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-wz3lnu-mg5amcnlo-WZxsec2016-Wselection-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "wlljj-ewk" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-wlljj-ewk-WZxsec2016-Wselection-v1/*",
@@ -13,11 +13,11 @@
     },
     "zz4l-powheg" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-zz4l-powheg-WZxsec2016-Wselection-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "zz4l-mg5amcnlo" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-zz4l-mg5amcnlo-WZxsec2016-Wselection-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "tt-lep" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-tt-lep-WZxsec2016-Wselection-v1/*",
@@ -45,11 +45,11 @@
     },
     "ttz" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-ttz-WZxsec2016-Wselection-v1/*",
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "ttw" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-ttw-WZxsec2016-Wselection-v1/*",
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "zzz" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-zzz-WZxsec2016-Wselection-v1/*",
@@ -81,15 +81,15 @@
     },
     "ggZZ4e" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-ggZZ4e-WZxsec2016-Wselection-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ4m" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-ggZZ4m-WZxsec2016-Wselection-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ2e2mu" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-ggZZ2e2mu-WZxsec2016-Wselection-v1/*",
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "data_DoubleEG_Run2016B-PromptReco-v2" : {
         "file_path" : "/data/kelong/DibosonAnalysisData/FinalSelection/2016-11-08-data_DoubleEG_Run2016B-PromptReco-v2-WZxsec2016-Wselection-v1/*",

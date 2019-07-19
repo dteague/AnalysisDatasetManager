@@ -3,6 +3,18 @@ import json
 import imp
 import glob
 
+def readPythonOrJson(file_path):
+    if ".pyc" in file_path[-4:] or ".jsonc" in file_path[-6:]:
+        return ""
+    if ".py" not in file_path[-3:] and ".json" not in file_path[-5:]:
+        if os.path.isfile(file_path+".py"):
+            file_path = file_path +".py"
+        elif os.path.isfile(file_path+".json"): 
+            file_path = file_path +".json"
+        else:
+            raise ValueError("Configuration file %s(.py/json) not found!" % file_path)
+    return file_path
+
 def readAllInfo(file_path):
     info = {}
     for info_file in glob.glob(file_path):
@@ -12,13 +24,17 @@ def readAllInfo(file_path):
     return info
 
 def readInfo(file_path):
-    if ".py" not in file_path[-3:] and ".json" not in file_path[-5:]:
-        if os.path.isfile(file_path+".py"):
-            file_path = file_path +".py"
-        elif os.path.isfile(file_path+".json"): 
-            file_path = file_path +".json"
-        else:
-            return
+    try:
+        file_path = readPythonOrJson(file_path)
+    # Fall back to single analysis-wide definition (not different by selection)
+    except ValueError:
+        if "/" in file_path:
+            file_path = file_path.rsplit("/", 1)[0]
+        pass
+        file_path = readPythonOrJson(file_path)
+    info = {}
+    if not os.path.isfile(file_path):
+        return info
     if ".py" in file_path[-3:]:
         file_info = imp.load_source("info_file", file_path)
         info = file_info.info
@@ -41,7 +57,6 @@ def getHistType(manager_path, selection, hist_name):
         "AnalysisDatasetManager", "PlotObjects", selection]) 
     all_hist_info = readInfo(hist_file)
     if hist_name not in all_hist_info.keys():
-        print all_hist_info
         raise ValueError("Invalid hist name '%s'. Must be defined in %s"
                 % (hist_name, hist_file))
     hist_info = all_hist_info[hist_name]["Initialize"]
@@ -53,7 +68,6 @@ def getHistBinInfo(manager_path, selection, hist_name):
         "AnalysisDatasetManager", "PlotObjects", selection]) 
     all_hist_info = readInfo(hist_file)
     if hist_name not in all_hist_info.keys():
-        print all_hist_info
         raise ValueError("Invalid hist name '%s'. Must be defined in %s"
                 % (hist_name, hist_file))
     hist_info = all_hist_info[hist_name]["Initialize"]
@@ -73,4 +87,5 @@ def getAllHistNames(manager_path, selection):
     hist_file = "/".join([manager_path, 
         "AnalysisDatasetManager", "PlotObjects", selection]) 
     all_hist_names = readInfo(hist_file).keys()
+
     return all_hist_names

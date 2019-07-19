@@ -1,10 +1,18 @@
-{
+info = {
     "wz-powheg" : {
         "Name" : "WZ",
         "Style" : "fill-lightpurple",
         "add_perc_error" : 0.0,
         "Members" : [
-            "wz3lnu-powheg"
+            "wz3lnu_powheg"
+        ]
+    },
+    "wz-powheg_testNano" : {
+        "Name" : "WZ",
+        "Style" : "fill-lightpurple",
+        "add_perc_error" : 0.0,
+        "Members" : [
+            "wz3lnu_powheg__testNano"
         ]
     },
     "wz-powheg_standalone" : {
@@ -12,7 +20,7 @@
         "Style" : "nofill-black-dotdash",
         "add_perc_error" : 0.0,
         "Members" : [
-            "wz3lnu-powheg"
+            "wz3lnu_powheg"
         ],
         "Scale" : 1.267
     },
@@ -21,7 +29,7 @@
         "Style" : "fill-purple",
         "add_perc_error" : 0.0,
         "Members" : [
-            "wz3lnu-mg5amcnlo"
+            "wz3lnu_mg5amcnlo"
         ],
         "Scale" : 0.854
     },
@@ -30,7 +38,7 @@
         "Style" : "nofill-darkblue-finedash",
         "add_perc_error" : 0.0,
         "Members" : [
-            "wz3lnu-mg5amcnlo"
+            "wz3lnu_mg5amcnlo"
         ],
         "Scale" : 0.854
     },
@@ -39,10 +47,10 @@
         "Style" : "fill-lightpurple",
         "add_perc_error" : 0.0,
         "Members" : [
-            "wz3lnu-mgmlm-0j",
-            "wz3lnu-mgmlm-1j",
-            "wz3lnu-mgmlm-2j",
-            "wz3lnu-mgmlm-3j"
+            "wz3lnu_mgmlm_0j",
+            "wz3lnu_mgmlm_1j",
+            "wz3lnu_mgmlm_2j",
+            "wz3lnu_mgmlm_3j"
         ]
     },
     "wz-mgmlm" : {
@@ -50,10 +58,10 @@
         "Style" : "fill-lightpurple",
         "add_perc_error" : 0.0,
         "Members" : [
-            "wz3lnu-mgmlm-0j",
-            "wz3lnu-mgmlm-1j",
-            "wz3lnu-mgmlm-2j",
-            "wz3lnu-mgmlm-3j"
+            "wz3lnu_mgmlm_0j",
+            "wz3lnu_mgmlm_1j",
+            "wz3lnu_mgmlm_2j",
+            "wz3lnu_mgmlm_3j"
         ]
     },
     "WZ" : {
@@ -61,10 +69,10 @@
         "Style" : "fill-lightpurple",
         "add_perc_error" : 0.0,
         "Members" : [
-            "wz3lnu-mgmlm-0j",
-            "wz3lnu-mgmlm-1j",
-            "wz3lnu-mgmlm-2j",
-            "wz3lnu-mgmlm-3j"
+            "wz3lnu_mgmlm_0j",
+            "wz3lnu_mgmlm_1j",
+            "wz3lnu_mgmlm_2j",
+            "wz3lnu_mgmlm_3j"
         ]
     },
     "QCD-WZjj" : {
@@ -72,10 +80,10 @@
         "Style" : "fill-lightpurple",
         "add_perc_error" : 0.0,
         "Members" : [
-            "wz3lnu-mgmlm-0j",
-            "wz3lnu-mgmlm-1j",
-            "wz3lnu-mgmlm-2j",
-            "wz3lnu-mgmlm-3j"
+            "wz3lnu_mgmlm_0j",
+            "wz3lnu_mgmlm_1j",
+            "wz3lnu_mgmlm_2j",
+            "wz3lnu_mgmlm_3j"
         ]
     },
     "wzjj-ewk_standalone" : {
@@ -532,6 +540,56 @@
         "Style" : "data",
         "Members" : [
             "AllData"
+        ]
+    },
+    "data_nano_2017" : {
+        "Name" : "Data",
+        "Style" : "data",
+        "Members" : [
+            "data_SingleElectron_Run2017B-Nano1June2019-v1",
+            "data_SingleElectron_Run2017C-Nano1June2019-v1",
+            "data_SingleElectron_Run2017D-Nano1June2019-v1",
+            "data_SingleElectron_Run2017E-Nano1June2019-v1",
+            "data_SingleElectron_Run2017F-Nano1June2019-v1",
+            "data_SingleMuon_Run2017B-Nano1June2019-v1",
+            "data_SingleMuon_Run2017C-Nano1June2019-v1",
+            "data_SingleMuon_Run2017D-Nano1June2019-v1",
+            "data_SingleMuon_Run2017E-Nano1June2019-v1",
+            "data_SingleMuon_Run2017F-Nano1June2019-v1",
+        ]
+    },
+    "data_nano_2016" : {
+        "Name" : "Data",
+        "Style" : "data",
+        "Members" : [
+            #"data_DoubleEG_Run2016B_ver2-Nano1June2019_ver2-v1",
+            #"data_DoubleEG_Run2016C-Nano1June2019-v1",
+            #"data_DoubleEG_Run2016D-Nano1June2019-v1",
+            #"data_DoubleEG_Run2016E-Nano1June2019-v1",
+            #"data_DoubleEG_Run2016F-Nano1June2019-v1",
+            #"data_DoubleEG_Run2016G-Nano1June2019-v1",
+            #"data_DoubleEG_Run2016H-Nano1June2019-v1",
+            #"data_DoubleMuon_Run2016B_ver2-Nano1June2019_ver2-v1",
+            #"data_DoubleMuon_Run2016C-Nano1June2019-v1",
+            #"data_DoubleMuon_Run2016D-Nano1June2019-v1"
+            #"data_DoubleMuon_Run2016E-Nano1June2019-v1",
+            #"data_DoubleMuon_Run2016F-Nano1June2019-v1",
+            #"data_DoubleMuon_Run2016G-Nano1June2019-v1",
+            #"data_DoubleMuon_Run2016H-Nano1June2019-v1",
+            "data_SingleElectron_Run2016B_ver2-Nano1June2018_ver2-v1",
+            "data_SingleElectron_Run2016C-Nano1June2018-v1",
+            "data_SingleElectron_Run2016D-Nano1June2018-v1",
+            "data_SingleElectron_Run2016E-Nano1June2018-v1",
+            "data_SingleElectron_Run2016F-Nano1June2018-v1",
+            "data_SingleElectron_Run2016G-Nano1June2018-v1",
+            "data_SingleElectron_Run2016H-Nano1June2018-v1",
+            "data_SingleMuon_Run2016B_ver2-Nano1June2018_ver2-v1",
+            "data_SingleMuon_Run2016C-Nano1June2018-v1",
+            "data_SingleMuon_Run2016D-Nano1June2018-v1",
+            "data_SingleMuon_Run2016E-Nano1June2018-v1",
+            "data_SingleMuon_Run2016F-Nano1June2018-v1",
+            "data_SingleMuon_Run2016G-Nano1June2018-v1",
+            "data_SingleMuon_Run2016H-Nano1June2018-v1",
         ]
     },
     "data_2016" : {

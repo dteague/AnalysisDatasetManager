@@ -3,8 +3,14 @@ info = {
         "Name" : "Drell-Yan",
         "Style" : "fill-yellow",
         "Members" : [
-            "DYm10-50",
             "DYm50"
+        ]
+    },
+    "tt" : {
+        "Name" : "t#bar{t}",
+        "Style" : "fill-green",
+        "Members" : [
+            "tt-lep"
         ]
     },
     "data" : {
@@ -25,11 +31,16 @@ info = {
         "Name" : "Data",
         "Style" : "data",
         "Members" : [
-            "data_DoubleMuon_Run2017B", 
-            "data_DoubleMuon_Run2017C", 
-            "data_DoubleMuon_Run2017D", 
-            "data_DoubleMuon_Run2017E", 
-            "data_DoubleMuon_Run2017F",
+            "data_SingleElectron_Run2017B", 
+            "data_SingleElectron_Run2017C", 
+            "data_SingleElectron_Run2017D", 
+            "data_SingleElectron_Run2017E", 
+            "data_SingleElectron_Run2017F",
+            "data_SingleMuon_Run2017B", 
+            "data_SingleMuon_Run2017C", 
+            "data_SingleMuon_Run2017D", 
+            "data_SingleMuon_Run2017E", 
+            "data_SingleMuon_Run2017F",
         ]
     }
 }

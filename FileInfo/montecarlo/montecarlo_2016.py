@@ -41,12 +41,12 @@ info = {
         "DAS Name" : "Private Generation",
         "Cards" : ""
     },
-    "wz3lnu-powheg" : {
+    "wz3lnu_powheg" : {
         "cross_section" : 4.43,
         "Source of cross section" : "POWHEG tarball",
         "DAS Name" : "WZTo3LNu_TuneCUETP8M1_13TeV-powheg-pythia8"
     },
-    "wz3lnu-mg5amcnlo" : {
+    "wz3lnu_mg5amcnlo" : {
         "cross_section" : 4.715,
         "Source of cross section" : "MG5_aMC@NLO gridpack",
         "DAS Name" : "WZTo3LNu_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8"
@@ -69,28 +69,28 @@ info = {
         "DAS Name" : "WLLJJ_WToLNu_EWK_aQGC-FM_TuneCUETP8M1_13TeV_madgraph-madspin-pythia8",
         "Generator" : "MadGraph5_aMC@NLO LO"
     },
-    "wz3lnu-mgmlm-0j" : {
+    "wz3lnu_mgmlm_0j" : {
         "cross_section" : 0.57706, 
         "kfactor" : 1.2,
         "Source of cross section" : "MadGraph LO with MLM merging",
         "DAS Name" : "WZTo3LNu_0Jets_MLL-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8",
         "Generator" : "MadGraph5_aMC@NLO LO"
     },
-    "wz3lnu-mgmlm-1j" : {
+    "wz3lnu_mgmlm_1j" : {
         "cross_section" : 0.344557, 
         "kfactor" : 1.2,
         "Source of cross section" : "MadGraph LO with MLM merging",
         "DAS Name" : "WZTo3LNu_1Jets_MLL-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8",
         "Generator" : "MadGraph5_aMC@NLO LO"
     },
-    "wz3lnu-mgmlm-2j" : {
+    "wz3lnu_mgmlm_2j" : {
         "cross_section" : 0.07684, 
         "kfactor" : 1.2,
         "Source of cross section" : "MadGraph LO with MLM merging",
         "DAS Name" : "WZTo3LNu_2Jets_MLL-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8",
         "Generator" : "MadGraph5_aMC@NLO LO"
     },
-    "wz3lnu-mgmlm-3j" : {
+    "wz3lnu_mgmlm_3j" : {
         "cross_section" : 0.11120, 
         "kfactor" : 1.2,
         "Source of cross section" : "MadGraph LO with MLM merging",
@@ -145,13 +145,13 @@ info = {
         "Source of cross section" : "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns#Single_top",
         "DAS Name" : "ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1"
     },
-    "zz4l-powheg" : {
+    "zz4l_powheg" : {
         "cross_section" : 1.256,
         "Source of cross section" : "POWHEG tarball",
         "Source of k-factor" : "k factor from mll only calculation of Grazzini",
         "DAS Name" : "ZZTo4L_13TeV_powheg_pythia8"
     },
-    "zz4l-mg5amcnlo" : {
+    "zz4l_mg5amcnlo" : {
         "cross_section" : 1.191,
         "Source of cross section" : "McM",
         "DAS Name" : "ZZTo4L_13TeV-amcatnloFXFX-pythia8",
@@ -279,7 +279,7 @@ info = {
         "Source of cross section" : "MCM",
         "DAS Name" : "DYJetsToLL_M-10to50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8"
     },
-    "tt-lep" : {
+    "tt_lep" : {
         "cross_section" : 87.31,
         "Source of cross section" : "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns#TTbar",
         "DAS Name" : "TTJets_DiLept_TuneCUETP8M1_13TeUETP8M2_ttHtranche3_13TeV-powheg-pythia8"

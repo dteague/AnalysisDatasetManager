@@ -447,7 +447,7 @@
             "SetMaximum" : 150
         }
     },
-   "jetPt[0]": {  
+   "jet1Pt": {  
         "Initialize": {  
             "type": "TH1D",
             "nbins": 40,
@@ -477,7 +477,7 @@
             "SetMaximum" : 100
         }
     },
-   "jetEta[0]": {  
+   "jet1Eta": {  
         "Initialize": {  
             "type": "TH1D",
             "nbins": 15,

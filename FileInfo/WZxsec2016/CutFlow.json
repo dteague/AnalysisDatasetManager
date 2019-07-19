@@ -53,10 +53,10 @@
         "weight" : "pdfWeights[171]/scaleWeights[0]"
     },
     "zz4l-powheg" : {
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "zz4l-mg5amcnlo" : {
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "tt-lep" : {
         "plot_group" : "top"
@@ -80,10 +80,10 @@
         "plot_group" : "st"
     },
     "ttz" : {
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "ttw" : {
-        "plot_group" : "ttv"
+        "plot_group" : "vvv"
     },
     "zzz" : {
         "plot_group" : "vvv"
@@ -128,13 +128,13 @@
         "plot_group" : "zg"
     },
     "ggZZ4e" : {
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ4m" : {
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "ggZZ2e2mu" : {
-        "plot_group" : "zz"
+        "plot_group" : "vv"
     },
     "data_DoubleEG_Run2016B-03Feb2017_ver2" : {
         "plot_group" : "data"

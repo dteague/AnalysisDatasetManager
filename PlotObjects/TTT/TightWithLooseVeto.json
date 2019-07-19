@@ -126,5 +126,20 @@
         "Attributes": {  
             "GetYaxis().SetTitle": "Events Passing Selection"
         }
+    },
+    "bJetvsJets": {  
+        "Initialize": {
+	    "type": "TH2D",
+            "nbinsx": 10,
+            "xmin": 0,
+            "xmax": 10,
+            "nbinsy": 10,
+            "ymin": 0,
+            "ymax": 10
+        },
+        "Attributes": {  
+            "GetXaxis().SetTitle": "N Jets",
+            "GetYaxis().SetTitle": "N bJets"
+        }
     }
 }
