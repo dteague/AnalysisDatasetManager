@@ -1,0 +1,77 @@
+{
+    "CutFlow": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 10,
+	    "xmin": 0,
+	    "xmax": 10
+	},
+	"Attributes": {
+	    "GetYaxis().SetTitle": "Events",
+	    "GetYaxis().SetTitleOffset": 1.3,
+	    "SetMinimum": 0.1,
+	    "SetMaximum": 7000000
+	}
+    },
+
+    "Beff_b_btag": {
+	"Initialize": {
+	    "type": "TH2D",
+	    "nbinsx": 300,
+	    "xmin": 0,
+	    "xmax": 3000,
+	    "nbinsy": 10,
+	    "ymin": -2.5,
+	    "ymax": 2.5
+	},
+	"Attributes": {
+	    "GetXaxis().SetTitle": "N Jets",
+	    "GetYaxis().SetTitle": "N bJets"
+	}
+    },
+    "Beff_j_btag": {
+	"Initialize": {
+	    "type": "TH2D",
+	    "nbinsx": 300,
+	    "xmin": 0,
+	    "xmax": 3000,
+	    "nbinsy": 10,
+	    "ymin": -2.5,
+	    "ymax": 2.5
+	},
+	"Attributes": {
+	    "GetXaxis().SetTitle": "N Jets",
+	    "GetYaxis().SetTitle": "N bJets"
+	}
+    },
+    "Beff_b": {
+	"Initialize": {
+	    "type": "TH2D",
+	    "nbinsx": 300,
+	    "xmin": 0,
+	    "xmax": 3000,
+	    "nbinsy": 10,
+	    "ymin": -2.5,
+	    "ymax": 2.5
+	},
+	"Attributes": {
+	    "GetXaxis().SetTitle": "N Jets",
+	    "GetYaxis().SetTitle": "N bJets"
+	}
+    },
+    "Beff_j": {
+	"Initialize": {
+	    "type": "TH2D",
+	    "nbinsx": 300,
+	    "xmin": 0,
+	    "xmax": 3000,
+	    "nbinsy": 10,
+	    "ymin": -2.5,
+	    "ymax": 2.5
+	},
+	"Attributes": {
+	    "GetXaxis().SetTitle": "N Jets",
+	    "GetYaxis().SetTitle": "N bJets"
+	}
+    }
+}

@@ -174,7 +174,7 @@ InputTier = args.input_tier
 
 
 if args.AddFile:
-    AddFile(ana(), sel(), args.AddFile)
+    AddFile(ana(), inp(), args.AddFile)
     exit(0)
 elif args.AddHistogram:
     AddHistogram(ana(), sel())
@@ -190,7 +190,7 @@ while True:
     # Add a file
     if action == "Add a File":
         file_path=raw_input("What is the File Path: ")
-        AddFile(ana(), sel(), file_path)
+        AddFile(ana(), inp(), file_path)
 
     # Add a Histogram
     elif action == "Add a Histogram":

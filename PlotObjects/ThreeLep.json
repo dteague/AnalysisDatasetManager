@@ -1,0 +1,534 @@
+{
+    "nPileup": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 150,
+	    "xmin": 0,
+	    "xmax": 150
+	}
+    },
+    "ptl1": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptl2": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "dilepMass": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "dilepCharge": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 4,
+	    "xmin": -2,
+	    "xmax": 2
+	}
+    },
+    "dijetMass": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "DRLep": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 100,
+	    "xmin": 0,
+	    "xmax": 10
+	}
+    },
+    "DRjb": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 100,
+	    "xmin": 0,
+	    "xmax": 10
+	}
+    },
+    "JLep1Cos": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 100,
+	    "xmin": -1,
+	    "xmax": 1
+	}
+    },
+    "JLep2Cos": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 100,
+	    "xmin": -1,
+	    "xmax": 1
+	}
+    },
+    "JBCos": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 100,
+	    "xmin": -1,
+	    "xmax": 1
+	}
+    },
+    "Shape1": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 100,
+	    "xmin": 0,
+	    "xmax": 1
+	}
+    },
+    "Shape2": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 100,
+	    "xmin": 0,
+	    "xmax": 1
+	}
+    },
+    "DRjet": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 100,
+	    "xmin": 0,
+	    "xmax": 10
+	}
+    },
+    "bjetpt": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 200,
+	    "xmin": 0,
+	    "xmax": 500
+	}
+    },
+    "jetpt": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 200,
+	    "xmin": 0,
+	    "xmax": 500
+	}
+    },
+    "HT": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 400,
+            "xmin": 0,
+            "xmax": 1600
+        }
+    },    
+    "Met": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 300,
+            "xmin": 0,
+            "xmax": 600
+        }
+    },        
+    "CRW_njet": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 10,
+            "xmin": 1.5,
+            "xmax": 11.5
+        }
+    },
+    "CRW_nbjet": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 7,
+            "xmin": -0.5,
+            "xmax": 6.5
+        }
+    },
+    "CRW_Met": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 15,
+            "xmin": 0,
+            "xmax": 600
+        }
+    },
+    "CRW_HT": {  
+	"Initialize": {  
+            "type": "TH1F",
+            "nbins": 15,
+            "xmin": 100,
+            "xmax": 1600
+	}
+    },
+    "CRZ_njet": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 10,
+            "xmin": 1.5,
+            "xmax": 11.5
+        }
+    },
+    "CRZ_nbjet": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 7,
+            "xmin": -0.5,
+            "xmax": 6.5
+        }
+    },
+    "CRZ_Met": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 15,
+            "xmin": 0,
+            "xmax": 600
+        }
+    },
+    "CRZ_HT": {  
+	"Initialize": {  
+            "type": "TH1F",
+            "nbins": 15,
+            "xmin": 100,
+            "xmax": 1600
+	}
+    },
+    "CRZ_ptl3": {  
+        "Initialize": {  
+            "type": "TH1F",
+            "nbins": 7,
+            "xmin": 0,
+	    "xmax": 140
+        }
+    },
+    "CutFlow": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 10,
+	    "xmin": 0,
+	    "xmax": 10
+	}
+    },
+    "SR": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 10,
+	    "xmin": 0,
+	    "xmax": 10
+	}
+    },
+    "njet": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 20,
+	    "xmin": 0,
+	    "xmax": 20
+	}
+    },
+    "nloosebjet": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 20,
+	    "xmin": 0,
+	    "xmax": 20
+	}
+    },
+    "ntightbjet": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 20,
+	    "xmin": 0,
+	    "xmax": 20
+	}
+    },
+    "nbjet": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 20,
+	    "xmin": 0,
+	    "xmax": 20
+	}
+    },
+    "nleps": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 20,
+	    "xmin": 0,
+	    "xmax": 20
+	}
+    },
+    "nlooseleps": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 20,
+	    "xmin": 0,
+	    "xmax": 20
+	}
+    },
+    "nloosevstightleps": {
+	"Initialize": {
+	    "type": "TH1F",
+	    "nbins": 20,
+	    "xmin": 0,
+	    "xmax": 20
+	}
+    },
+    "YieldByChannel": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 3,
+	    "xmin": 0,
+	    "xmax": 10
+	}
+    },
+    "weight": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 200,
+	    "xmin": -2,
+	    "xmax": 2
+	}
+    },
+    "bJetvsJets": {
+	"Initialize": {
+	    "type": "TH2D",
+	    "nbinsx": 10,
+	    "xmin": 0,
+	    "xmax": 10,
+	    "nbinsy": 10,
+	    "ymin": 0,
+	    "ymax": 10
+	}
+    },
+    "centrality": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 50,
+	    "xmin": 0,
+	    "xmax": 1
+	}
+    },
+    "sphericity": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 50,
+	    "xmin": 0,
+	    "xmax": 1
+	}
+    },
+    "ptj1": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptj2": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptj3": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptj4": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptj5": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptj6": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptj7": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptj8": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "dphi_l1j1": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0, 
+	    "xmax": 3.15
+	}
+    },
+    "dphi_l1j2": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 3.15
+	}
+    },
+    "dphi_l1j3": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 3.15
+	}
+    },
+    "etab": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": -4.5,
+	    "xmax": 4.5
+	}
+    },
+    "etaj": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": -4.5,
+	    "xmax": 4.5
+	}
+    },
+    "etaj1": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": -4.5,
+	    "xmax": 4.5
+	}
+    },
+    "etaj2": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": -4.5,
+	    "xmax": 4.5
+	}
+    },
+    "etaj3": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": -4.5,
+	    "xmax": 4.5
+	}
+    },
+    "ptj1OverHT": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 100,
+	    "xmin": 0,
+	    "xmax": 1
+	}
+    },
+    "ptb1": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptb2": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptb3": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "ptb4": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": 0,
+	    "xmax": 1000
+	}
+    },
+    "etab1": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": -2.5,
+	    "xmax": 2.5
+	}
+    },
+    "etab2": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": -2.5,
+	    "xmax": 2.5
+	}
+    },
+    "etab3": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 400,
+	    "xmin": -2.5,
+	    "xmax": 2.5
+	}
+    },
+    
+    "ptb1OverHT": {
+	"Initialize": {
+	    "type": "TH1D",
+	    "nbins": 100,
+	    "xmin": 0,
+	    "xmax": 1
+	}
+    }
+}

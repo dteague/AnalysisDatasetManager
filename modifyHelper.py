@@ -1,4 +1,5 @@
 import os
+import json
 
 ################################################
 # File to hold the getter and setter functions #
@@ -142,7 +143,7 @@ def addMCItem(name):
     with open("./FileInfo/montecarlo/montecarlo_2016.py",'w') as ofile:
         ofile.write("info ="+ json.dumps(info, indent=4))
 
-def addMemeber(analysis, group_name, member):
+def addMember(analysis, group_name, member):
     config = dict()
     execfile("./PlotGroups/%s.py" % (analysis), config)
     info = config["info"]
@@ -185,9 +186,9 @@ def addPlotObject(analysis, selection, inpVars):
     tmpdict["Initialize"] = {}
     tmpdict["Attributes"] = {}
     tmpdict["Initialize"]["type"] = "TH1F"
-    tmpdict["Initialize"]["nbins"] = inpVars.pop(0)
-    tmpdict["Initialize"]["xmin"] = inpVars.pop(0)
-    tmpdict["Initialize"]["xmax"] = inpVars.pop(0)
+    tmpdict["Initialize"]["nbins"] = int(inpVars.pop(0))
+    tmpdict["Initialize"]["xmin"] = int(inpVars.pop(0))
+    tmpdict["Initialize"]["xmax"] = int(inpVars.pop(0))
     tmpdict["Attributes"]["GetXaxis().SetTitle"] = inpVars.pop(0)
     tmpdict["Attributes"]["GetYaxis().SetTitle"] = inpVars.pop(0)
     tmpdict["Attributes"]["GetYaxis().SetTitleOffset"] = 1.3

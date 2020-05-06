@@ -1,0 +1,243 @@
+{
+    "GenElecPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "SetMinimum": 0.1, 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "GetYaxis().SetTitle": "", 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "GenMuonPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "GetYaxis().SetTitle": "", 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "SetMinimum": 0.1, 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    },
+    "MatchElecPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "SetMinimum": 0.1, 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "GetYaxis().SetTitle": "", 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "MatchMuonPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "GetYaxis().SetTitle": "", 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "SetMinimum": 0.1, 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "FakeElecPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "SetMinimum": 0.1, 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "GetYaxis().SetTitle": "", 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "FakeMuonPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "GetYaxis().SetTitle": "", 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "SetMinimum": 0.1, 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+
+    "NGenMuon": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 10, 
+            "type": "TH1F", 
+            "xmax": 10
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "GetYaxis().SetTitle": "", 
+            "GetXaxis().SetTitle": "", 
+            "SetMinimum": 0.1, 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "NGenElec": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 10, 
+            "type": "TH1F", 
+            "xmax": 10
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "SetMinimum": 0.1, 
+            "GetXaxis().SetTitle": "", 
+            "GetYaxis().SetTitle": "", 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    },
+    "NGenBJets": {
+	"Initialize": {
+            "xmin": 0, 
+            "nbins": 10, 
+            "type": "TH1F", 
+            "xmax": 10
+	}, 
+	"Attributes": {
+            "SetMaximum": 3000, 
+            "GetYaxis().SetTitle": "", 
+            "GetXaxis().SetTitle": "", 
+            "SetMinimum": 0.1, 
+            "GetYaxis().SetTitleOffset": 1.3
+	}
+    }, 
+    "NGenJets": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 10, 
+            "type": "TH1F", 
+            "xmax": 10
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "SetMinimum": 0.1, 
+            "GetXaxis().SetTitle": "", 
+            "GetYaxis().SetTitle": "", 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    },
+    "GenBJetPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "SetMinimum": 0.1, 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "GetYaxis().SetTitle": "", 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "GenJetPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "GetYaxis().SetTitle": "", 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "SetMinimum": 0.1, 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    },
+    "MatchBJetPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "SetMinimum": 0.1, 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "GetYaxis().SetTitle": "", 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "MatchJetPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "GetYaxis().SetTitle": "", 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "SetMinimum": 0.1, 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "FakeBJetPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "SetMinimum": 0.1, 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "GetYaxis().SetTitle": "", 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }, 
+    "FakeJetPt": {
+        "Initialize": {
+            "xmin": 0, 
+            "nbins": 100, 
+            "type": "TH1F", 
+            "xmax": 500
+        }, 
+        "Attributes": {
+            "SetMaximum": 3000, 
+            "GetYaxis().SetTitle": "", 
+            "GetXaxis().SetTitle": "Pt [GeV]", 
+            "SetMinimum": 0.1, 
+            "GetYaxis().SetTitleOffset": 1.3
+        }
+    }
+}

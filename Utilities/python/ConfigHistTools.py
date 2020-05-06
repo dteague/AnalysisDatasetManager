@@ -6,6 +6,8 @@ import glob
 def readPythonOrJson(file_path):
     if ".pyc" in file_path[-4:] or ".jsonc" in file_path[-6:]:
         return ""
+    if ".py~" in file_path[-4:] or ".json~" in file_path[-6:]:
+        return ""
     if ".py" not in file_path[-3:] and ".json" not in file_path[-5:]:
         if os.path.isfile(file_path+".py"):
             file_path = file_path +".py"
