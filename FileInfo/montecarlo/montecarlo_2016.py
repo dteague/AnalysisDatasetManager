@@ -316,13 +316,13 @@ info = {
         "Source of cross section" : "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns#Single_top",
         "DAS Name" : "ST_tW_antitop_5f_inclusiveDecays_13TeV-powheg-pythia8_TuneCUETP8M1"
     },
-    "zz4l_powheg" : {
+    "zz4l-powheg" : {
         "cross_section" : 1.256,
         "Source of cross section" : "POWHEG tarball",
         "Source of k-factor" : "k factor from mll only calculation of Grazzini",
         "DAS Name" : "ZZTo4L_13TeV_powheg_pythia8"
     },
-    "zz4l_mg5amcnlo" : {
+    "zz4l-mg5amcnlo" : {
         "cross_section" : 1.191,
         "Source of cross section" : "McM",
         "DAS Name" : "ZZTo4L_13TeV-amcatnloFXFX-pythia8",
@@ -400,11 +400,6 @@ info = {
         "Source of cross section" : "HTT group",
         "DAS Name" : "DY4JetsToLL_M-50_TuneCUETP8M1_13TeV-madgraphMLM-pythia8"
     },
-    "DYm50" : {
-        "cross_section" : 5765.4,
-        "Source of cross section" : "https://twiki.cern.ch/twiki/bin/viewauth/CMS/SummaryTable1G25ns#DY_Z",
-        "DAS Name" : "DYJetsToLL_M-50_TuneCUETP8M1_13TeV-[amcatnloFXFX OR madgraphMLM]-pythia8"
-    },
     "DYm50-filt" : {
         "cross_section" : 5765,
         "Source of cross section" : "GenXSecAnalyzer",
@@ -412,19 +407,19 @@ info = {
         "Notes" : "Filtered to remove overlap with Zgamma sample. Events with photons from q or l with pt > 10 GeV are rejected."
     },
     "DYm50-0j-nlo" : {
-        "cross_section" : 4770,
+        "cross_section" : 4620,
         "Source of cross section" : "McM",
         "DAS Name" : "DYToLL_0J_13TeV-amcatnloFXFX-pythia8",
         "Notes" : ""
     },
     "DYm50-1j-nlo" : {
-        "cross_section" : 931.3,
+        "cross_section" : 859,
         "Source of cross section" : "McM",
         "DAS Name" : "DYToLL_1J_13TeV-amcatnloFXFX-pythia8",
         "Notes" : ""
     },
     "DYm50-2j-nlo" : {
-        "cross_section" : 374,
+        "cross_section" : 338,
         "Source of cross section" : "McM",
         "DAS Name" : "DYToLL_2J_13TeV-amcatnloFXFX-pythia8",
         "Notes" : ""
@@ -701,3 +696,8 @@ info = {
         "DAS Name" : "ChargedHiggsToWZTo3LNu_M2000_13TeV-madgraph-pythia8"
     }
 }
+
+append = {}
+for key, value in info.iteritems():
+    append[key.replace("-", "_")] = value
+info.update(append)

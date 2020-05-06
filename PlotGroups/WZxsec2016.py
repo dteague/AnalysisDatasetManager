@@ -1,5 +1,5 @@
 info = {
-    "wz-powheg" : {
+    "wz_powheg" : {
         "Name" : "WZ",
         "Style" : "fill-lightpurple",
         "add_perc_error" : 0.0,
@@ -75,6 +75,17 @@ info = {
             "wz3lnu_mgmlm_3j"
         ]
     },
+    "QCD_WZjj" : {
+        "Name" : "QCD-WZjj",
+        "Style" : "fill-lightpurple",
+        "add_perc_error" : 0.0,
+        "Members" : [
+            "wz3lnu_mgmlm_0j",
+            "wz3lnu_mgmlm_1j",
+            "wz3lnu_mgmlm_2j",
+            "wz3lnu_mgmlm_3j"
+        ]
+    },
     "QCD-WZjj" : {
         "Name" : "QCD-WZjj",
         "Style" : "fill-lightpurple",
@@ -124,6 +135,14 @@ info = {
             "wlljj-ewk__prefire"
         ]
     },
+    "EW_WZjj" : {
+        "Name" : "EW-WZjj",
+        "Style" : "nofill-darkpurple-dash",
+        "add_perc_error" : 0.0,
+        "Members" : [
+            "wlljj_ewk"
+        ]
+    },
     "EW-WZjj" : {
         "Name" : "EW-WZjj",
         "Style" : "nofill-darkpurple-dash",
@@ -170,18 +189,18 @@ info = {
             "wz-atgc_pt300__sm"
         ]
     },
-    "vv-powheg" : {
+    "vv_powheg" : {
         "Name" : "VV",
         "Style" : "fill-blue",
         "add_perc_error" : 0.0,
         "Members" : [
-            "zz4l-powheg",
+            "zz4l_powheg",
             "ww",
             "ggZZ4e",
             "ggZZ4m",
             "ggZZ2e2mu",
-            "zz4ljj-ewk",
-            "zz2l2vjj-ewk"
+            "zz4ljj_ewk",
+            "zz2l2vjj_ewk"
         ]
     },
     "ZZ" : {
@@ -263,7 +282,7 @@ info = {
             "DYm50-4j"
         ]
     },
-    "dy-lo" : {
+    "dy_lo" : {
         "Name" : "Drell-Yan",
         "Style" : "fill-yellow",
         "add_perc_error" : 0.3,
@@ -698,3 +717,8 @@ info = {
         ]
     }
 }
+
+append = {}
+for key, value in info.iteritems():
+    append[key.replace("-", "_")] = value
+info.update(append)

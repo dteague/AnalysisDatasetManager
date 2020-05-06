@@ -111,6 +111,20 @@
         "SetLineWidth": 2,
         "SetMarkerSize" : 0
     },
+    "nofill-lightpurple-dash" : {
+        "SetFillColor": 0,
+        "SetLineColor": "ROOT.TColor.GetColor(#984ea3)",
+        "SetLineStyle": 7,
+        "SetLineWidth": 3,
+        "SetMarkerSize" : 0
+    },
+    "nofill-lightpurple-dotdash" : {
+        "SetFillColor": 0,
+        "SetLineColor": "ROOT.TColor.GetColor(#984ea3)",
+        "SetLineStyle": 8,
+        "SetLineWidth": 3,
+        "SetMarkerSize" : 0
+    },
     "nofill-darkpurple-dash" : {
         "SetFillColor": 0,
         "SetLineColor": "ROOT.TColor.GetColor(#4C0257)",
@@ -239,7 +253,104 @@
         "SetLineWidth": 3,
         "SetMarkerSize" : 0
     },
-    
+    "fill-red" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#e41a1c)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade1" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#ffcccc)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade2" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#ff9999)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade3" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#ff6666)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade4" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#ff3333)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade5" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#ff0000)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade6" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#cc0000)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade7" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#990000)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade8" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#800000)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade9" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#660000)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade10" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#4d0000)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-red-shade11" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#330000)",
+        "SetLineColor": "ROOT.TColor.GetColor(#980000)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-lightred" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#990000)",
+        "SetLineColor": "ROOT.TColor.GetColor(#e41a1c)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 2,
+        "SetMarkerSize" : 0
+    },
+    "fill-lightblue" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#add8e6)",
+        "SetLineColor": "ROOT.TColor.GetColor(#377eb8)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 2,
+        "SetMarkerSize" : 0
+    },
     "nofill-lightred" : {
         "SetLineColor": "ROOT.TColor.GetColor(#e41a1c)",
         "SetLineStyle": 1,
@@ -350,7 +461,34 @@
         "SetLineWidth": 2,
         "SetMarkerSize" : 0
     },
-    
+    "fill-yelloworange" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#F7CD76)",
+        "SetLineColor": "ROOT.TColor.GetColor(#DD3527)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-lightpink" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#F7CFFC)",
+        "SetLineColor": "ROOT.kBlack",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-darkpink" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#CF626C)",
+        "SetLineColor": "ROOT.kBlack",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
+    "fill-pink" : {
+        "SetFillColor": "ROOT.TColor.GetColor(#f781bf)",
+        "SetLineColor": "ROOT.TColor.GetColor(#AB3573)",
+        "SetLineStyle": 1,
+        "SetLineWidth": 1,
+        "SetMarkerSize" : 0
+    },
     "hatch-pink" : {
         "SetFillColor": "ROOT.TColor.GetColor(#f781bf)",
         "SetLineColor": "ROOT.TColor.GetColor(#AB3573)",

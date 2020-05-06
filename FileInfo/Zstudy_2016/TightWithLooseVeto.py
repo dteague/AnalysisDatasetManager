@@ -4,7 +4,7 @@ info = {
         "file_path" : "",
         "plot_group" : "dy"
     },
-    "tt-lep" : {
+    "tt_lep" : {
         "file_path" : "",
         "plot_group" : "tt"
     },

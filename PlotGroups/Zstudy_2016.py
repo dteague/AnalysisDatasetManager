@@ -10,7 +10,7 @@ info = {
         "Name" : "t#bar{t}",
         "Style" : "fill-green",
         "Members" : [
-            "tt-lep"
+            "tt_lep"
         ]
     },
     "data" : {

@@ -2,6 +2,7 @@ import os
 import json
 import imp
 import glob
+import copy
 
 def readPythonOrJson(file_path):
     if ".pyc" in file_path[-4:] or ".jsonc" in file_path[-6:]:
@@ -38,7 +39,7 @@ def readInfo(file_path):
     if not os.path.isfile(file_path):
         return info
     if ".py" in file_path[-3:]:
-        file_info = imp.load_source("info_file", file_path)
+        file_info = imp.load_source(file_path.split("/")[-1], file_path)
         info = file_info.info
     else:
         info = readJson(file_path)
